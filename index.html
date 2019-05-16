@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>this is a test</title>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="Insect.js"></script>
+
+    <script>
+        var socket = io(); // this establishes the connection. 
+    </script>
+
+<link rel="stylesheet" type="text/css" href="Insect.css">
+</head>
+
+
+
+<body onload="init();">
+    <div style="width: 800px;" >
+        
+
+        <div class="item_line">
+            <button onclick="clearResults()">Clear</button>
+            <button onclick="init()">Reset</button>
+            <button onclick="send()">Send</button>
+        </div>
+        
+        <div class="item_line">
+            <label>Value1</label> <input id="MaxRunners" style="width:100px" value="1">
+            <label>Value2</label> <input id="ExactaDepth" style="width:100px" value="2">     
+            <label>Value3</label> <input id="iter" style="width:100px" value="3">     
+        </div>
+
+        
+        <div class="item_line">
+          <br /><p>Another Block</p>
+            <div style="display: flex">
+                <p style="width:140px ; text-indent:20px"> LIST1 </p>
+                <p style="width:130px"> LIST2   </p>
+                <p style="width:120px"> LIST3   </p>
+
+            </div>
+            <div style="display: flex">
+                <div id="list1" ; style="height:300px;width:100px;border:1px solid #ccc;background-color:white;overflow:auto; margin:1%">   </div>
+                <div id="list2" ; style="height:300px;width:100px;border:1px solid #ccc;background-color:white;overflow:auto; margin:1%">   </div>
+                <div id="list3" ; style="height:300px;width:100px;border:1px solid #ccc;background-color:white;overflow:auto; margin:1%">   </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>
