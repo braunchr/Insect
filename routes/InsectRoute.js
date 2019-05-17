@@ -3,7 +3,6 @@ const router = express.Router();
 
 // this handles all the routing of this specific route 
 // so no more filtering is required
-
 var bodyParser = require("body-parser");
 router.use(bodyParser.json({ extended: true })); // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -11,8 +10,7 @@ router.use(bodyParser.urlencoded({ extended: true })); // for parsing applicatio
 
 router.post('/', function (req, res) {
 console.log('received a POST request');
-    var xxx = req.body;
-
+req.io.sockets.emit('postEvent', {myText:'this is the broadcast data'});
 });  
 
 

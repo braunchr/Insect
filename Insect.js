@@ -1,10 +1,14 @@
-
-
+ 
 
 function init() {
 
-    showResults();
+    var socket = io(); // this establishes the connection. 
 
+    socket.on('postEvent', function(data){
+       document.getElementById("list2").innerHTML += "<div>" + data.myText + "</div>"; // this is adding the string to the "list 1" element in the HTML        
+});
+ 
+    showResults();
 }
 
 function send() {
@@ -16,7 +20,7 @@ function send() {
         "placeA": 3
     }
 
-    xhr.open('POST', 'http://localhost:4000/', true);
+    xhr.open('POST', 'http://localhost:3000/', true);
     xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(data));
     xhr.onload = function () {
