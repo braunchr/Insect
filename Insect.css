@@ -30,5 +30,46 @@ button:hover {
 .item_line {
     background-color: beige;
     margin-top: 7px;
-    padding-left: 1%
+    padding-left: 1%;
 }
+
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px;
+    background-color: grey;
+    padding: 5px;
+    margin-left: 100px;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(200, 200, 200, 1);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    animation-duration: 1s;
+    
+  }
+  
+  
+  /* Standard syntax */
+  @keyframes grey1 {
+    0%   {background-color: auto;}
+    50%  {background-color: rgb(220, 221, 240);} 
+    100% {background-color: auto;}
+  }
+  
+  @keyframes grey2 {
+    0%   {background-color: auto;}
+    50%  {background-color: rgb(128, 169, 192);} 
+    100% {background-color: auto;}
+  }
+  
+  @keyframes grey3 {
+    0%   {background-color: auto;}
+    50%  {background-color: rgb(54, 76, 104);} 
+    100% {background-color: auto;}
+  }
+  

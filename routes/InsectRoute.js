@@ -10,7 +10,8 @@ router.use(bodyParser.urlencoded({ extended: true })); // for parsing applicatio
 
 router.post('/', function (req, res) {
 console.log('received a POST request');
-req.io.sockets.emit('postEvent', {myText:'this is the broadcast data'});
+req.io.sockets.emit('postEvent', req.body);
+res.status(404).json({ message: 'response from POST'})
 });  
 
 
